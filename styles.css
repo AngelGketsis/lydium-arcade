@@ -1,0 +1,76 @@
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: url('background-image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.arcade-machine {
+    width: 725px;
+    height: 725px;
+    position: absolute;
+    top: 47%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+}
+
+.screen {
+    /*background: #0f0;  Green screen 
+    border: 10px solid #444;*/
+    border-radius: 10px;
+    width: 80%;
+    height: 60%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: blink 1s infinite;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 24px;
+    color: #6a0dad;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.grid-item {
+    background: #6a0dad; /* Purple buttons */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.grid-item:hover {
+    background: #8a2be2; /* Lighter purple on hover */
+}
+
